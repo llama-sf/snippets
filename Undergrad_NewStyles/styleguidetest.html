@@ -1,0 +1,137 @@
+# Catalog Playground
+
+Catalog pages are written in ordinary [Markdown]. You can use special code blocks (called [specimens]) to show color palettes, hints, typefaces, or even interactive [React] components. Below are a few examples of specimens you can play around with. In the [documentation][docs] you can find a list of all supported specimens and how to make use of their full potential.
+
+## Color Swatches
+Simple, individual color swatches defined with a name and hex
+
+```color
+span: 2
+name: "Light Blue"
+value: "#b0f6ff"
+```
+
+```color
+span: 2
+name: "Dark Blue"
+value: "#2666a4"
+```
+
+```color
+span: 2
+name: "Bright Red"
+value: "#ff5555"
+```
+
+## Color Palettes
+Color palettes are ideal to define gradient steps or color schemes.
+
+```color-palette
+colors:
+   - {value: "#c7eae5"}
+   - {value: "#80cdc1"}
+   - {value: "#35978f"}
+   - {value: "#01665e"}
+   - {value: "#003c30"}
+```
+
+## Typography
+The type specimen is best used to present the ratio and hierarchy of typographical elements like headings.
+
+```type
+{
+  "headings": [98,28,21,16,14,12],
+  "font": "sans-serif",
+  "color": "#333"
+}
+```
+
+## HTML
+The HTML specimen allows the documentation of HTML as well as JavaScript and CSS based views.
+
+```html
+<textarea placeholder='Add your comment' rows='6' cols='50'></textarea>
+<button style='display:block'>Submit</button>
+```
+
+## Interactive Components
+The React specimen lets you document and build React components. Just write JSX code in the specimen content. For documenting interactive components, the React Specimen provides local state and a `setState` function to the specimen code.
+
+```react
+state: { clicked: 0 }
+---
+<button onClick={() => setState({clicked: state.clicked + 1})}>
+  Clicked {state.clicked} times
+</button>
+```
+
+## Responsive Container
+The HTML is wrapped in a `<iframe>` so that you can test media queries and simulate different devices.
+
+```html
+responsive: true
+---
+<div>
+<style>
+  .responsive-grid-example {
+    padding: 24px;
+    text-align: center;
+    background-color: #c2d8ea;
+    height: 100vh;
+  }
+  .responsive-grid-example > h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .box {
+    height: 72px;
+    margin: 0 0 12px 0;
+    background-color: #205779;
+  }
+@media (min-width: 1024px) {
+  .grid {
+    flex-direction: row;
+  }
+  .box {
+    height: 144px;
+    margin: 0 12px 12px 0;
+  }
+  .box:nth-child(2n){
+    margin: 0 0 12px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .box {
+    height: 288px;
+    margin: 0 12px 12px 0;
+  }
+  .box:nth-child(2n){
+    margin: 0 12px 12px 0;
+  }
+  .box:nth-child(4n){
+    margin: 0 0 12px 0;
+  }
+}
+</style>
+<div class='responsive-grid-example'>
+  <h1>Responsive Grid Example</h1>
+  <div class='grid'>
+    <div class='box'></div>
+    <div class='box'></div>
+    <div class='box'></div>
+    <div class='box'></div>
+  </div>
+</div>
+```
+
+[docs]: https://docs.catalog.style/
+[Markdown]: https://en.wikipedia.org/wiki/Markdown
+[React]: https://reactjs.org/
+[specimens]: https://docs.catalog.style/specimens

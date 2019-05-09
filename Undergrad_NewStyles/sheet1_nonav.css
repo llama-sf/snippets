@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: Raleway;*/
+  font-family: Source Serif Pro;
+  line-height: 1.5;
+  color: #3f3c30;
+  font-size: 22px;
+  padding: 15px;
+}
+
+p.photocaption {
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  clear: right;
+}
+
+a {
+  color: #990000;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.bodylist ul {
+  list-style-type: none;
+}
+
+.bodylist li {
+  list-style-image: url('/images/bullet2.png');
+}
+
+.bignumberedlist ol {
+  list-style: none;
+  color: #ccc;
+}
+
+.bignumberedlist ol li {
+  font-family: Source Serif Pro;
+  font-weight: 600;
+  font-size: 48px;
+  color: #B1040e;
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px red;
+  line-height: 2;
+}
+
+.bignumberedlist li p {
+  font-family: Source Serif Pro;
+  font-size: 16pt;
+  font-weight: normal;
+  color: #555;
+  padding-left: 10px;
+}
+
+.bignumberedlist span {
+  position: absolute;
+  line-height: 25px;
+}
+
+/* LIST #2 */
+#list2 { width:320px; }
+
+#list2 ol {
+  font-style:italic;
+  font-family:Georgia, Times, serif;
+  font-size:24px;
+  color:#bfe1f1;
+}
+
+#list2 ol li { }
+
+#list2 ol li p {
+  padding:8px;
+  font-style:normal;
+  font-family:Arial;
+  font-size:13px;
+  color:#eee;
+  border-left: 1px solid #999;
+}
+
+/* LIST #3 */
+#list3 { width:95%; }
+
+#list3 ol {
+  font-style:italic;
+  font-weight: bold;
+  font-family:Source Serif Pro;
+  font-size:42px;
+  color:#990000;
+  margin-left: 20px;
+}
+
+#list3 ol li { }
+
+#list3 ol li p {
+  padding:10px;
+  font-style:normal;
+  font-family:Source Sans Pro Light;
+  font-weight: normal;
+  font-size:24px;
+  color: #3F3C30;
+  border-left: 1px dotted #B1040e;
+}
+
+#list3 span {
+  font-family: Source Sans Pro;
+  font-weight: 600;
+  color: #B1040e;
+}
+
+/*button*/
+.button {
+  background: linear-gradient(180deg,#e60009 0%,#B1040e 100%);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family: Source Sans Pro;
+}
+
+/* .bodylist li::before {
+  content: "•";
+  color: #990000;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-weight: bold;
+}*/
+
+
+/* Style the side navigation
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: #B1040e;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: normal;
+  border-bottom: 1px solid #dbdbdb;
+  display: block;
+}
+
+
+/* Change color on hover */
+.sidenav a:hover {
+    font-weight: bold;
+}
+
+.sidenav h2 {
+padding-left: 20px;
+}
+
+.sidenav li {
+  list-style-type: none;
+}
+
+.sidenav ul li a {
+    display: block;
+    padding: 7px 10px;
+    background-color: transparent;
+    list-style-type: none;
+    border-bottom: 1px solid #e0dcd4;
+    /*background-image: url('/images/rightarrow30.png');*/
+    background-repeat: no-repeat;
+    background-position: 98%;
+}
+*/
+
+
+/* Style the content */
+.content {
+  margin-left: 220px;
+  padding-left: 20px;
+}
+
+h1 {
+  color: #B1040e;
+  font-size: 42px;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: Source Serif Pro;
+  letter-spacing: 0.01em;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 50%;
+  background-color: white;
+}
+
+.right {
+  width: 50%;
+  background-color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img.shadow_left {
+    width: 400px;
+    height: 300px;
+    float: left;
+    clear: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  img.shadow_right {
+      width: 400px;
+      height: 300px;
+      float: left;
+      clear: right;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+.phototext_right {
+
+  }
+
+span.red-uppercase {
+    font-family: Source Serif Pro;
+    color: #B1040e;
+    letter-spacing: 0.01em;
+  }
+
+  hr {
+    border: 1px dashed #3F3C30;
+  }
